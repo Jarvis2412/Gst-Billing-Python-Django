@@ -1,0 +1,64 @@
+{% load static %}
+
+<!-- Logo -->
+<a href='/'' class="logo">
+    <!-- mini logo for sidebar mini 50x50 pixels -->
+    <span class="logo-mini">POS</span>
+    <!-- logo for regular state and mobile devices -->
+    <span class="logo-lg">Point of Sale</span>
+</a>
+<!-- Header Navbar: style can be found in header.less -->
+<nav class="navbar navbar-static-top">
+    <!-- Sidebar toggle button-->
+    <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+    </a>
+    <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+            <!-- User Account: style can be found in dropdown.less -->
+            <li class="dropdown user user-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    <img src='/static/images/img-01.png' class="user-image" alt="User Image">
+                    <span class="hidden-xs">{% if request.user.first_name  or request.user.last_name %}
+                        {{ request.user.first_name }} {{ request.user.last_name }} {% else %}
+                        {{ request.user.username }} {% endif %}</span>
+                </a>
+                <ul class="dropdown-menu">
+                    <!-- User image -->
+                    <li class="user-header">
+                        <img src='/static/images/img-01.png' class="img-circle"
+                             alt="User Image">
+                        <p>
+                            <small>I'm Full-Stack</small>
+                            Programmer
+                        </p>
+                    </li>
+                    <!-- Menu Footer-->
+                    <li class="user-footer">
+                        <!--Logout Button-->
+<center>
+ <table align="center" cellspacing="0" cellpadding="0" width="100%">
+   <tr>
+     <td align="center" style="padding: 10px;">
+       <table border="0" class="mobile-button" cellspacing="0" cellpadding="0">
+         <tr>
+           <td align="center" bgcolor="#1479ee" style="background-color: #1479ee; margin: auto; max-width: 600px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 15px 20px; " width="100%">
+           <!--[if mso]>&nbsp;<![endif]-->
+               <a href="{% url 'logout' %}" target="_blank" style="15px; font-family: Arial Black, Arial, sans-serif; color: #ffffff; font-weight:normal; text-align:center; background-color: #1479ee; text-decoration: none; border: none; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; display: inline-block;">
+                   <span style="font-size: 15px; font-family: Arial Black, Arial, sans-serif; color: #ffffff; font-weight:normal; line-height:1.5em; text-align:center;">Logout</span>
+             </a>
+           <!--[if mso]>&nbsp;<![endif]-->
+           </td>
+         </tr>
+       </table>
+     </td>
+   </tr>
+ </table>
+</center>
+<!--Logout Button-->
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>
